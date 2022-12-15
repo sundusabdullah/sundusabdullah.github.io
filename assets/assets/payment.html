@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- <link rel="stylesheet" href="moyasar.css"> -->
+    <!-- Moyasar Styles -->
+    <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.7.3/moyasar.css">
+
+    <!-- Moyasar Scripts -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
+    <script src="https://cdn.moyasar.com/mpf/1.7.3/moyasar.js"></script>
+    <!-- <script src="moyasar.js" defer></script> -->
+</head>
+
+<body style="margin: 2rem;">
+    <div class="payment-form"></div>
+    <script>
+        Moyasar.init({
+            element: '.payment-form',
+            language: 'ar',
+            amount: 100,
+            currency: 'SAR',
+            description: 'React Native Payment Demo',
+            publishable_api_key: 'pk_test_AQpxBV31a29qhkhUYFYUFjhwllaDVrxSq5ydVNui',
+            callback_url: 'https://payments.local/return',
+            methods: ['creditcard'],
+        });
+    </script>
+</body>
+</html>
