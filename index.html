@@ -25,7 +25,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="payment">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <!-- Moyasar Styles -->
+    <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.7.3/moyasar.css">
 
+    <!-- Moyasar Scripts -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
+    <script src="https://cdn.moyasar.com/mpf/1.7.3/moyasar.js"></script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -44,8 +49,19 @@
   <link rel="stylesheet" href="moyasar.css">
   <script src="moyasar.js" defer></script>
 </head>
-<body>
-  <script>
+<body style="margin: 2rem;">
+    <div class="payment-form"></div>
+    <script>
+        Moyasar.init({
+            element: '.payment-form',
+            language: 'ar',
+            amount: 100,
+            currency: 'SAR',
+            description: 'React Native Payment Demo',
+            publishable_api_key: 'pk_test_AQpxBV31a29qhkhUYFYUFjhwllaDVrxSq5ydVNui',
+            callback_url: 'https://payments.local/return',
+            methods: ['creditcard'],
+        });
     // window.addEventListener('load', function(ev) {
     //   // Download main.dart.js
     //   _flutter.loader.loadEntrypoint({
