@@ -51622,7 +51622,7 @@ A.q0.prototype={
 al(){return new A.ze(B.m)}}
 A.ze.prototype={
 M(a){var s=null
-return new A.rK(new A.oP(new A.td("CheckOut",s,s,s,s),new A.Hd(s,s,1/0,56),s),new A.tM(new A.Qh(this),"https://sundusabdullah.github.io/",B.xB,s),s)}}
+return new A.rK(new A.oP(new A.td("CheckOut",s,s,s,s),new A.Hd(s,s,1/0,56),s),new A.tM(new A.Qh(this),"https://sundusabdullah.github.io/payment",B.xB,s),s)}}
 A.Qh.prototype={
 $1(a){},
 $S:298}
